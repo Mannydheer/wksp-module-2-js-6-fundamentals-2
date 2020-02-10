@@ -1,11 +1,12 @@
 # 2.6.2 - Hoisting
-
+<!--  -->
 ---
 
 ### Variables
 
 Basically, when Javascript compiles all of your code, all variable declarations using `var` are hoisted/lifted to the top of their functional/local scope regardless of where the actual declaration has been made.
-
+ <!-- takes all your var and brings them to the top of your code. In a more importance stand point. 
+ If you were using Var, since it is a global var, it will always go to the top.  -->
 --- 
 
 ## Functions
@@ -20,6 +21,11 @@ Functions declarations are also hoisted, but these go to the very top, so will s
 // what will output to the console?
 console.log(greeting);
 var greeting = 'Hello';
+// var will only bring the var DECLARATION to the top.
+// but it will not bring its value.
+// so it is undefined.
+
+
 
 // a. 'Hello'
 // b. undefined

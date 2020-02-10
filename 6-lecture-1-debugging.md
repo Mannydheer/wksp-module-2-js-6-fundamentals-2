@@ -55,7 +55,7 @@ Most of the time, the computer will give you the exception needed to start fixin
 ```js
 const x = 5;
 const y = [1, 2, 3]
-
+//does not work.  
 y.map(x);
 ```
 
@@ -101,6 +101,7 @@ _It's one of the most important parts of this course._
 ---
 
 - What is it?
+<!-- test with different numbers,  -->
 - Why do we do it?
 - When do we do it?
 
@@ -111,3 +112,21 @@ _Let's talk about test-driven development a little._
 ### What is a test?
 
 ---
+
+
+
+<!-- exmaple. -->
+function sum(num1,num2) {
+    return num1+num2
+}
+
+
+<!-- A TEST -->
+Validating that the function is behaving how you want it to.
+function sumTest (x,y,z) {
+    return sum(x,y) === z;
+}
+
+<!-- a test case -->
+
+sumTest(5,5,10);
