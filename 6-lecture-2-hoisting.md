@@ -75,7 +75,7 @@ function greetMe() {
 greetMe();
 var yourName = 'Fred';
 ```
-
+<!-- return undefined.  -->
 ---
 
 Of note, it is not the declarations themselves that are moved to the top, just the JS compiler that reading them first and alloting them memory space.

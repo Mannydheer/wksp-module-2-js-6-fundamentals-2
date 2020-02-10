@@ -24,19 +24,26 @@ Switch statements are a more efficient way to code when testing _multiple_ condi
 ### Example
 
 ```js
+//if the time is equal to 6, then do whatever is in case 6. 
+//notice the break at the end.
+//notice you have to say case. 
 switch (time) {
     case 6:
         console.log('Wake up!');
         alarm();
+        //BREAK will gtfo of the wgike swutcg statement,. 
         break;
     case 22:
         console.log('off to bed');
         turnOffComputer();
         break;
+        //dont necesarrily need to have a default. But it's better practise even if it does nothing. 
+        //What is means: If none of the cases above are "called"
     default:
         console.log('Keep doing what you\'re doing');
         noChange();
         break;
+        //If I dont put break, it will not jump back out and look at the case, it will remain inside since there is no break. 
 }
 ```
 

@@ -19,6 +19,42 @@ is a variable in function, or method, definition.
 ```js
 // Example
 
+function greeting(name)
+{
+    return `${name}! Want some bacon?`;
+}
+//now need to call it. 
+greeting('daniel');
+
+
+
+function greeting(names)
+{   
+    names.forEach(function(name) {
+        console.log(`${name}! Want some bacon?`);
+    });
+}
+//now need to call it. 
+greeting(['daniel', 'bob', 'clara']);
+
+
+
+//need to reutn map to something. retunr the array. 
+
+//need to review.
+function greeting(names)
+{   
+    names.map(function(name) {
+        const x = `${name}! Want some bacon?`;
+        return x;
+    });
+}
+//now need to call it. 
+console.log (greeting(['daniel', 'bob', 'clara']));
+
+
+
+//ANYTHING AFTER A RETURN - doesnt read it
 ```
 
 ---
@@ -37,6 +73,7 @@ is the value given to the parameter when a function, or method is called.
 What is the output of this function?
 
 ```js
+//Still will run it, but will ignore bye. 
 function f() {
     console.log("hello");
 }
@@ -78,6 +115,7 @@ There are 2 other ways to _define_ a function
 ```js
 const someFunc = function() {
     // do something...
+    //assigning it to a var. 
 }
 ```
 
@@ -90,9 +128,12 @@ This will _define_ a function expression.
 The third way is an arrow function
 
 ```js
-someFunc = () => {
+//parameters go in the bracket/
+someFunc = (num1, num2) => {
     // do something...
 }
+
+names.forEach(name) => console.log(name));
 ```
 
 This is equivalent to the previous way of _defining_ a function. 
@@ -116,7 +157,26 @@ someFunc = () => {
 }
 
 console.log(someFunc());
+
+
+// Example
+someFunc = () => {
+    return 'bacon';
+}
+
+otherFunc = (string) => {
+    return string.split();
+}
+
+
+//review this. 
+console.log(otherFunc(someFunc()));
 ```
+
+
+
+
+
 
 `return` is the end of the line...
 
