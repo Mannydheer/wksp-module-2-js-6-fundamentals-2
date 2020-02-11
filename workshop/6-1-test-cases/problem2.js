@@ -7,8 +7,15 @@ let verifyEquals = require('../../assets/verify-equals');
 // If the string does not have a first character, return undefined.
 
 function f(str) {
-    
-}
+
+    let strLength = str.length;
+    let newstrLength = strLength - 1;
+    let newString = str.slice(newstrLength, strLength);
+  
+    return newString;
+  }
+  
+
 
 // Step 2
 // We need 5 test cases. The first input is provided.
@@ -16,6 +23,9 @@ function f(str) {
 
 let inputs = ['max'];
 let outputs = ['x'];
+
+
+
 
 // Step 3
 // Run this file in the debugger.
