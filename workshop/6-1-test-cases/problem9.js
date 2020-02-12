@@ -11,8 +11,11 @@ let verifyEquals = require('../../assets/verify-equals');
 // HINTS: 
 //    - You'll need to use the split string method
 //    - A for loop might be helpful
+let emptyArray = [];
 
 function f(str) {
+
+    for (i = 0; i <str.length)
 
 }
 

@@ -14,3 +14,13 @@
 // Guidelines
 // - write only one event listener
 // - use a switch statement
+
+
+switch (document.querySelector('button').addEventListener('click', dosomething)) {
+
+    case 
+
+
+
+
+}

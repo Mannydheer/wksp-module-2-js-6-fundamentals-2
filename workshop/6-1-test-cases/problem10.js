@@ -10,7 +10,19 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - Use a for loop to capitalize the words one by one
 //    - Use the toUpperCase string method
 
+
+
+
 function f(str) {
+  let upperString = [];
+
+  str = str.split('');
+  let length = str.length;
+
+  for (i = 0; i <= length; i++) {
+    let upper = str.
+  }
+
 
 }
 
