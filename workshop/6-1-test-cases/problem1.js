@@ -9,7 +9,7 @@ let verifyEquals = require('../../assets/verify-equals');
 
 function f(str) {
     let slicer = str.slice(0,1);
-    if (slicer == ' ') {
+    if (slicer == '') {
         return undefined;
     }
     return slicer;
@@ -22,31 +22,8 @@ function f(str) {
 // Don't forget to test all of the question parameters
 
 
-let inputs = ['max', 'bacon', 'Zebra', 'lion', ''];
+let inputs= ['max', 'bacon', 'Zebra', 'lion', ''];
 let outputs = ['m', 'b', 'Z', 'l', undefined];
-
-var storeInput;
-
-switch (str) {
-    case "m":
-    storeInput = "max";
-    break;
-    case "b":
-    storeInput = "bacon";
-    break;
-    case "Z":
-    storeInput = "Zebra";
-    break;
-    case "l":
-    storeInput = "lion";
-    break;
-    case " ":
-    storeInput = undefined;
-    break;
-
-
-}
-
 
 
 

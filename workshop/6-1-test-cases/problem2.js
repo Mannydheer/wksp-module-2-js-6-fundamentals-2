@@ -21,10 +21,8 @@ function f(str) {
 // We need 5 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = ['max'];
-let outputs = ['x'];
-
-
+let inputs = ['max', 'gaby', 'manny', 'vicky', 'dom'];
+let outputs = ['x', 'y', 'y', 'y', 'm'];
 
 
 // Step 3

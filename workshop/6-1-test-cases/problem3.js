@@ -1,5 +1,5 @@
 let verifyEquals = require('../../assets/verify-equals');
-
+  
 // Problem 3
 // ---------
 // Step 1
@@ -8,17 +8,31 @@ let verifyEquals = require('../../assets/verify-equals');
 // If anything other than an array with 2 numbers is passed, return undefined.
 // You can use the typeof function to check the type of each element (e.g. typeof 3 returns 'number')
 
-function f(input) {
 
+function f(input) {
+  
+    let sum = 0;
+   
+    input.forEach(element => {
+      if (typeof element === 'number' && sum != undefined) {
+        sum += element;
+      }
+      else if (typeof element ==='string' || typeof element ==='boolean') {
+       sum = undefined;
+      }
+   
+    });
+    return sum; 
 }
+
+
 
 // Step 2
 // We need 7 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = [[2, 4], [-3, 3]];
-let outputs = [6, 0];
-
+let inputs = [[2, 4], [-3, 3], ['s','s'], ['s', 1], [true,'s'], [false, false], [4, true]];
+let outputs = [6, 0, undefined, undefined, undefined, undefined, undefined];
 // Step 3
 // Run this file in the debugger.
 // If you get the "All test passed for..." message, move on to the next exercise.
