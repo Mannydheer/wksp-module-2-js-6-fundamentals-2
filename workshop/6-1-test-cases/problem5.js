@@ -9,27 +9,20 @@ let verifyEquals = require('../../assets/verify-equals');
 
 
 function f(input) {
-    let sum = 0;
-    input.forEach(element => {
-
-      if (typeof element === 'number' && sum != undefined) {
-        sum =+ element;
-      }
-      else if (typeof element === 'string' || typeof element === 'boolean') {
-        sum = undefined;
-      }
-        
-    });
-
-    return sum;
+   if (typeof input[0] != 'number' || typeof input[1] != 'number' || input.length != 2) {
+     return undefined;
+   }
+   else {
+     return input[0] * input[1];
+   }
 }
 
 // Step 2
 // We need 5 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = [[2, 7]];
-let outputs = [14];
+let inputs = [[2, 7], [5,10], ['s', 6], ['s','s'], true,'s'];
+let outputs = [14, 50, undefined, undefined, undefined];
 
 // Step 3
 // Run this file in the debugger.

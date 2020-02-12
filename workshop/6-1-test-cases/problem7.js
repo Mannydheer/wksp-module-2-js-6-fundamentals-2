@@ -11,8 +11,23 @@ let verifyEquals = require('../../assets/verify-equals');
 // f(["foo", 3]) // "foofoofoo"
 // f(["fo", 3]) // "fofofo"
 // f(["foo", -1]) // ""
+let newString;
 
 function f(arr) {
+
+    let stringHolder = arr[0];
+    let numHolder = arr[1]; 
+    if (typeof stringHolder == 'string' && numHolder > 0) {
+        newString = stringHolder.repeat(numHolder);
+    }
+    else if  (numHolder <= 0 && typeof stringHolder == 'string') {
+        newString = ' ';
+    }
+    else if (typeof stringHolder !== 'string' || typeof numHolder != 'number') {
+      newString = undefined;
+    }
+return newString;
+
     
 }
 
@@ -20,8 +35,8 @@ function f(arr) {
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
 
-let inputs = [];
-let outputs = [];
+let inputs = [['hello',3], ['hi', 5], ['yo', -5], ['yo', 'yp'], [-5, -5], [-5 , 'yo'], ['yo', 1]];
+let outputs = ['hellohellohello', 'hihihihihi', ' ' , undefined, undefined,undefined, 'yo' ];
 
 // Step 3
 // Run this file in the debugger.
