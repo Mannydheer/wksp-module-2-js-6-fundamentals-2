@@ -14,14 +14,24 @@ let verifyEquals = require('../../assets/verify-equals');
 let emptyArray = [];
 
 function f(str) {
+    //split the words into their own strings. 
+    const words = str.split(' ');
+    //declare empty string. 
+    let longest = '';
 
-    for (i = 0; i <str.length)
+    for (let i = 0; i < words.length; i++) {
+        //first iteration, longestlength is 0. Then store the first word in longest.
 
+        if (longest.length <= words[i].length) longest = words[i];
+    }
+    return longest;
 }
 
+f('hey hello morning');
+
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ['hi how r u', 'whatsup loser', 'computermac lol', 'come home', ''];
+let outputs = ['how', 'whatsup', 'computermac', 'home', ''];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

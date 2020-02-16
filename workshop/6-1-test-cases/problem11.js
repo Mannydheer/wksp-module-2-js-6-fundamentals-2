@@ -5,12 +5,24 @@ let verifyEquals = require('./verify-equals.js');
 // Make this function return the sum of all the numbers in the input array.
 // If any element in the array is not a number, skip it. If the array is empty, return zero.
 
+
 function f(arr) {
+    let sum = 0;
+    arr.forEach(element => {
+        //only will add if its numbers, fi string or boolean, will ignore it. 
+        if (typeof element === "number") {
+            sum += element;
+        }
+
+    });
+    return sum;
 
 }
 
 // Test cases
-let inputs = [];
+let inputs = [
+    [2, 3, 4, 5]
+];
 let outputs = [];
 
 // STOP -----------------------------------------------------------------
