@@ -14,21 +14,17 @@ let verifyEquals = require('../../assets/verify-equals');
 
 
 function f(str) {
-  let upperString = [];
-
-  str = str.split('');
-  let length = str.length;
-
-  for (i = 0; i <= length; i++) {
-    let upper = str.
-  }
-
-
+  const capitalize = (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  return str
+    .split(' ')
+    .map(capitalize)
+    .join(' ');
 }
 
+
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ['hello dear', 'welcome home', 'homerun', true, 'dearoei jo'];
+let outputs = ['Hello Dear', 'Welcome Home', 'Homerun', undefined, "Dearoei Jo"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
